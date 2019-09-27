@@ -7,22 +7,22 @@ print ("----------Задача 1-------------")
 # # y = -12*x + 11111140.2121
 # # print (y)
 # # Решение задачи в заданном частном виде. equation = 'y = -12x + 11111140.2121'
-# str_koeff1 = equation[4:7]
-# str_koeff2 = equation[11:]
-# koeff1 = float(str_koeff1)
-# koeff2 = float(str_koeff2)
-# y = koeff1*x + koeff2
-# print (y)
+str_koeff1 = equation[4:7]
+str_koeff2 = equation[11:]
+koeff1 = float(str_koeff1)
+koeff2 = float(str_koeff2)
+y = koeff1*x + koeff2
+print (y)
 #
 # #Решение задачи в общем виде. Считаем, что заданное выражение приведено к виду "y = kx + b", и нет лишних пробелов
-# a1 = equation.find("=")
-# a2 = equation.find("x")
-# str_koeff1 = equation[a1+1:a2]  #Нашли k
-# str_koeff2 = equation[a2+3:]    #Нашли b
-# koeff1 = float(str_koeff1)
-# koeff2 = float(str_koeff2)
-# y = koeff1*x + koeff2
-# print (y)
+a1 = equation.find("=")
+a2 = equation.find("x")
+str_koeff1 = equation[a1+1:a2]  #Нашли k
+str_koeff2 = equation[a2+3:]    #Нашли b
+koeff1 = float(str_koeff1)
+koeff2 = float(str_koeff2)
+y = koeff1*x + koeff2
+print (y)
 
 # Задание-2: Дата задана в виде строки формата 'dd.mm.yyyy'.
 # Проверить, корректно ли введена дата.
@@ -42,55 +42,55 @@ print ("----------Задача 2-------------")
 # date = '1.12.1001'
 # date = '-2.10.3001'
 #
-# date = input("Введите дату в формате dd.mm.yyyy :")
-# print("Ведена дата ", date)
-# a1 = date.find(".")
-# a2 = date.rfind(".")
+date = input("Введите дату в формате dd.mm.yyyy :")
+print("Ведена дата ", date)
+a1 = date.find(".")
+a2 = date.rfind(".")
 # print(a1,a2)
 #
-# str_day = date[:a1]      #получаем день
-# str_month = date[a1+1:a2]   #получаем месяц
-# str_year = date[a2+1:]     #получаем год
-# #print("День - ", str_day, ", месяц - ", str_month, ", год - ", str_year)
-# day = int(str_day)
-# month = int(str_month)
-# year = int(str_year)
-# #print("День - ", day, ", месяц - ", month, ", год - ", year)
-# yes = True
-# while True:
-#     if len(str_day)==2 and len(str_month)==2 and len(str_year)==4:
-#         yes = True
-#     else:
-#         yes = False
-#         print ("Дата не соответствует формату 2 символа для дня, 2 - для месяца, 4 - для года")
-#         break
-#     if not int(year) in range(1,10000):
-#         yes = False
-#         print ("Год не в диапазоне от 1 до 9999")
-#         break
-#     if not int(month) in range(1,13):
-#         yes = False
-#         print("Месяц не в диапазоне от 1 до 12")
-#         break
-#     if int(month) in [1, 3, 5, 7, 8, 10, 12]:
-#         if int(day) in range(1, 32):
-#             yes = True
-#         else:
-#             yes = False
-#             print("Неправильное число дня")
-#             break
-#     else:
-#         if int(day) in range(1, 31):
-#             yes = True
-#         else:
-#             yes = False
-#             print("Неправильное число дня")
-#             break
-#     break
-# if yes:
-#     print("Дата введена корректно")
-# else:
-#     print("Дата введена некорректно.")
+str_day = date[:a1]      #получаем день
+str_month = date[a1+1:a2]   #получаем месяц
+str_year = date[a2+1:]     #получаем год
+#print("День - ", str_day, ", месяц - ", str_month, ", год - ", str_year)
+day = int(str_day)
+month = int(str_month)
+year = int(str_year)
+#print("День - ", day, ", месяц - ", month, ", год - ", year)
+yes = True
+while True:
+    if len(str_day)==2 and len(str_month)==2 and len(str_year)==4:
+        yes = True
+    else:
+        yes = False
+        print ("Дата не соответствует формату 2 символа для дня, 2 - для месяца, 4 - для года")
+        break
+    if not int(year) in range(1,10000):
+        yes = False
+        print ("Год не в диапазоне от 1 до 9999")
+        break
+    if not int(month) in range(1,13):
+        yes = False
+        print("Месяц не в диапазоне от 1 до 12")
+        break
+    if int(month) in [1, 3, 5, 7, 8, 10, 12]:
+        if int(day) in range(1, 32):
+            yes = True
+        else:
+            yes = False
+            print("Неправильное число дня")
+            break
+    else:
+        if int(day) in range(1, 31):
+            yes = True
+        else:
+            yes = False
+            print("Неправильное число дня")
+            break
+    break
+if yes:
+    print("Дата введена корректно")
+else:
+    print("Дата введена некорректно.")
 
 
 # Задание-3: "Перевёрнутая башня" (Задача олимпиадного уровня)
